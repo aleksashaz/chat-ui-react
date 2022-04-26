@@ -31,7 +31,7 @@ export function MuiMessage({
 
   const ChatUsername = (
     <Box maxWidth="100%" mx={1}>
-      <Typography variant="body2" align={message.self ? 'right' : 'left'}>
+      <Typography variant="body2" align={message.self ? 'right' : 'left'} maxWidth="510px">
         {message.username}
       </Typography>
     </Box>
@@ -43,6 +43,7 @@ export function MuiMessage({
         variant="body2"
         align={message.self ? 'right' : 'left'}
         color="textSecondary"
+        maxWidth="510px"
       >
         {dispDate?.toLocaleTimeString([], {
           hour: '2-digit',
@@ -81,7 +82,7 @@ export function MuiMessage({
               <div style={{flex: '0 1 0%', display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
                 <Typography
                   variant="body1"
-                  style={{ overflowWrap: 'break-word', whiteSpace: 'pre-wrap', display: 'flex', alignItems: 'center'}}>
+                  style={{ overflowWrap: 'break-word', whiteSpace: 'pre-wrap', display: 'flex', alignItems: 'center', maxWidth: '510px'}}>
                     {message.content}
                 </Typography>
                 {message.buttons}
